@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminAssociationMaster.master.cs" Inherits="WebAppNet472.AdminAssociationMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminAssociationMaster.master.cs" Inherits="WebAppNet472.AdminAssociationMaster" %>
 
 <!DOCTYPE html>
 <html>
@@ -17,12 +17,12 @@
 </head>
 
 <body class="w-full h-screen">
-    <form id="form1" runat="server" class="w-full h-full relative flex flex-col items-center justify-start lg:justify-center gap-8 p-4 xl:max-w-[80%] lg:py-[2rem] lg:flex-row lg:m-0 lg:mx-auto">
+    <form id="form1" runat="server" class="w-full h-auto lg:h-full relative flex flex-col items-center justify-start lg:justify-center gap-8 lg:gap-4 p-4 xl:max-w-[90%] lg:py-[2rem] lg:flex-row lg:m-0 lg:mx-auto">
         <header id="header" class="h-fit w-full lg:h-full sticky top-0 z-20 lg:static lg:w-fit">
             <!-- This is where the React component will be rendered -->
             
         </header>
-        <main role="main" class="w-full h-full">
+        <main role="main" class="w-full h-full lg:overflow-scroll" style="scrollbar-width:none;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
         </main>
     </form>
