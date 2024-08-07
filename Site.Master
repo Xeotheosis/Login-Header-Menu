@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebAppNet472.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: Page.Title %> - AsPropManager</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <header>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <a class="navbar-brand" href="~/Default.aspx">AsPropManager</a>
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/AdminApp.aspx">Admin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/AdminAssociation.aspx">Association Admin</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <asp:Label ID="lblUserInfo" runat="server" CssClass="navbar-text"></asp:Label>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/Logout.aspx">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main role="main" class="pb-3">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </main>
+        </div>
+    </form>
+</body>
+</html>
